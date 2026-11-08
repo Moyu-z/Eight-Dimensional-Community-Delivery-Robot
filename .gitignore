@@ -1,0 +1,115 @@
+# =============================================================================
+# Unity 项目专用 .gitignore
+# 适用：Unity 6（6000.x）项目
+#
+# 毕设提交原则：
+#   必须纳入 Git：Assets/、Packages/、ProjectSettings/、Docs/、Assets/Screenshots/
+#   不得纳入 Git：Library/、Temp/、Logs/、UserSettings/、Build/ 等生成目录
+#   特别注意：Assets/ 下的 .meta 文件必须提交，否则 Unity 会丢失资源引用
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Unity 自动生成的工程缓存与临时目录
+# -----------------------------------------------------------------------------
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# 内存快照、录屏文件通常体积很大，且可能包含敏感数据
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Unity 崩溃或诊断输出
+sysinfo.txt
+*.stackdump
+*.log
+
+# -----------------------------------------------------------------------------
+# IDE / 编辑器生成的解决方案与工程文件
+# 这些文件可由 Unity 重新生成，不应作为源码提交
+# -----------------------------------------------------------------------------
+.vs/
+.vscode/
+.idea/
+.consulo/
+.gradle/
+
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.opendb
+
+# Rider / Visual Studio 用户级设置
+*.DotSettings.user
+.vsconfig
+
+# -----------------------------------------------------------------------------
+# Unity 为上述生成文件自动附带的 .meta
+# 注意：Assets/ 下其他资源的 .meta 必须保留并提交
+# -----------------------------------------------------------------------------
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# -----------------------------------------------------------------------------
+# 构建产物与导出包
+# 最终可执行版本可单独打包提交，不必放进 Git 仓库
+# -----------------------------------------------------------------------------
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.ipa
+
+# Addressables / StreamingAssets 生成内容（若项目使用 Addressables）
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Crashlytics 等第三方构建生成文件
+crashlytics-build.properties
+
+# -----------------------------------------------------------------------------
+# Unity / Rider 自动生成的编辑器插件
+# -----------------------------------------------------------------------------
+# 如果确实需要把 Asset Store 工具提交进仓库，可注释掉下一行
+/[Aa]ssets/AssetStoreTools*
+/[Aa]ssets/Plugins/Editor/JetBrains*
+/[Aa]ssets/Plugins/Editor/Rider*
+
+# -----------------------------------------------------------------------------
+# 临时文件、编辑器交换文件与操作系统杂项
+# -----------------------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.swp
+*~
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# 本机 DSH 为修复文件权限生成的恢复记录，不属于项目源码
+/.dsh-acl-recovery/
